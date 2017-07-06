@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpPage">
+   <center>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="Wallet_enterPage_LabelsHBox" alignment="CENTER_LEFT" depthTest="ENABLE" prefHeight="400.0" prefWidth="150.0" spacing="25.0">
+               <children>
+                  <Label fx:id="wallet_signupPage_name_Label" text="Name" />
+                  <Label fx:id="wallet_signupPage_sirname_Label" text="Sirname" />
+                  <Label fx:id="wallet_signupPage_email_Label" text="E-mail" />
+                  <Label fx:id="wallet_signupPage_birtdate_Label" text="Birth Date" />
+                  <Label fx:id="wallet_signupPage_job_Label" text="Job" />
+                  <Label fx:id="wallet_signupPage_income_Label" text="Average Monthly Income" />
+                  <Label fx:id="wallet_signupPage_colour_Label" text="Favourite Colour" />
+                  <Label />
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="400.0" prefWidth="150.0" spacing="17.0">
+               <children>
+                  <TextField fx:id="wallet_signupPage_name_tf" promptText="Name" />
+                  <TextField fx:id="wallet_signupPage_sirname_tf" promptText="Sirname" />
+                  <TextField fx:id="wallet_signupPage_email_tf" promptText="E-Mail Adress"/>
+                  <DatePicker fx:id="wallet_signupPage_birthday_datePicker" />
+                  <TextField fx:id="wallet_signupPage_job_tf" />
+                  <TextField fx:id="wallet_signupPage_income_tf" />
+                  <ColorPicker fx:id="wallet_signupPage_colour_colourPicker" />
+                  <Button fx:id="wallet_signupPage_register_Button" mnemonicParsing="false" text="Button" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>

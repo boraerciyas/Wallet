@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Class-Path: C:\Users\yunusbora\Desktop\Wallet\src\sample\Main.java
+Main-Class: sample.Main
+

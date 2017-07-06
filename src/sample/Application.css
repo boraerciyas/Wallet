@@ -1,0 +1,5 @@
+.flowPane {
+    -fx-background-image: url("design/wallet_background_4.jpg");
+    -fx-gap-start-and-end: true;
+    -fx-spacing: 5px;
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - wallet@localhost" uuid="bb5e9ff1-a9ee-425a-8875-95a717120fdb">
+    <database-info product="MySQL" version="5.7.11-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="wallet"/>
+      <table id="2" parent="1" name="entries"/>
+      <table id="3" parent="1" name="operation"/>
+      <table id="4" parent="1" name="type"/>
+      <column id="5" parent="2" name="Eid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="6" parent="2" name="quantity">
+        <data-type>double</data-type>
+      </column>
+      <column id="7" parent="2" name="time">
+        <mandatory>1</mandatory>
+        <data-type>timestamp</data-type>
+        <default-expression>&apos;CURRENT_TIMESTAMP&apos;</default-expression>
+      </column>
+      <column id="8" parent="2" name="Tid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="9" parent="2" name="Oid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="10" parent="2" name="operation_fk">
+        <columns>Oid</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="11" parent="2" name="type_fk">
+        <columns>Tid</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="12" parent="2" name="PRIMARY">
+        <columns>Eid</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="13" parent="2" name="operation_fk">
+        <columns>Oid</columns>
+        <ref-key>~.operation.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="14" parent="2" name="type_fk">
+        <columns>Tid</columns>
+        <ref-key>~.type.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="15" parent="3" name="Oid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="16" parent="3" name="Oname">
+        <data-type>varchar(25)</data-type>
+      </column>
+      <key id="17" parent="3" name="PRIMARY">
+        <columns>Oid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="18" parent="4" name="Tid">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="19" parent="4" name="Tname">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <key id="20" parent="4" name="PRIMARY">
+        <columns>Tid</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
